@@ -1,0 +1,47 @@
+<h1> Student Detail</h1>
+<a href="/" class="button">Add Data</a>
+<style>
+    .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: purple;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        /* Style for hover effect */
+        .button:hover {
+            background-color: rgba(203, 76, 203, 0.993);
+            transform: scale(1.1);
+        }
+</style>
+<table border="1">
+    <tr>
+        <td>No</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Hobby</td>
+        <td>City</td>
+        <td>Image</td>
+        <td>Action</td>
+    </tr>
+
+   <% var i = 1; for (var v of stData) { %>
+<tr >
+    <td><%= i %></td>
+    <td><%= v.name %></td>
+    <td><%= v.age %></td>
+    <td><%= v.gender %></td>
+    <td><%= v.hobby %></td>
+    <td><%= v.city %></td>
+    <td><img src="<%= v.avtar %>" height="100px" width="100px" style="object-fit: cover;"></td>
+    <td><a href="/deletRecord/<%= v.id %>">Delet</a> ||
+        <a href="/updateRecord/<%= v.id%>">Update</a></td>
+</tr>
+<% i++; } %>
+</table>

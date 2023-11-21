@@ -1,0 +1,41 @@
+<h1> Add Student Detail</h1>
+
+<form method="post" action="/post/insertData" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>Title</td>
+            <td><input type="text" name="title"></td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td><textarea type="text" name="content"></textarea></td>
+        </tr>
+            <td>Upload Image</td>
+            <td><input type="file" name="postImage"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Add Data"></td>
+        </tr>
+    </table>
+</form>
+<a href="/post/ViewRecord" class="button">View Data</a>
+<style>
+    .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: purple;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        /* Style for hover effect */
+        .button:hover {
+            background-color: rgba(203, 76, 203, 0.993);
+            transform: scale(1.1);
+        }
+</style>

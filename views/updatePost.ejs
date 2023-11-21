@@ -1,0 +1,22 @@
+<form method="post" action="/post/EditPostData" enctype="multipart/form-data">
+    <input type="hidden" name="EditId" value="<%=postUpdate.id%>">
+    <table border="1">
+        <tr>
+            <td>Title</td>
+            <td><input type="text" name="title" value="<%=postUpdate.title%>"></td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td><textarea type="text" name="content"><%=postUpdate.content%></textarea></td>
+        </tr>
+            <td>Upload Image</td>
+            <td style="display: flex; justify-content: center; align-items: center;"><input type="file" name="postImage">
+                <img src="<%=postUpdate.postImage%>" height="60px">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Edit Data"></td>
+        </tr>
+    </table>
+</form>
