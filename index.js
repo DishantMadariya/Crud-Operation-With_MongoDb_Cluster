@@ -3,7 +3,7 @@ const port =8004;
 const app=express();
 // const db = require('./config/mongoose');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://adishantpatel:DishArchie1630@atlascluster.b6nfu4q.mongodb.net/testing',{
+mongoose.connect('mongodb+srv://adishantpatel:DishArchie1630@crudoperation.a5dhaps.mongodb.net/testing',{
     useUnifiedTopology : true,
     useNewUrlParser : true
 }).then(()=>console.log("Database Connected")).catch(err => console.log(err));
